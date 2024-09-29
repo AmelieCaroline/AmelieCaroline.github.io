@@ -23,8 +23,9 @@ then I clicked on "clone"
 >I am Caroline from North Carolina, and I am a **student in Business analytics** at Waketech. I am a native French speaker and I am also doing good in English. I like challenges and I am very motivated to learn new stuffs.
 ## My Interests
 **_Hobbies_**
->I enjoy sewing and spending time with family. 
->**_academic interests_**
+>I enjoy sewing and spending time with family.
+>
+**_Academic interests_**
 >I am curently learning softwares like MySQL, SAS, Excel, Tableau, PowerBI. I spend a lot of time watching videos about data analytics projects on youtube.
 ## Websites I Recommend
    * [YouTube](https://www.youtube.com) _It is very helpful when it comes to find practical examples._
