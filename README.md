@@ -62,7 +62,7 @@ The goal of this project was to analyze sales data to understand trends and over
 - Highlighted top-performing product categories  
 
 
-# Sales Performance Analysis
+### Sales Performance Analysis
 
 **Files**
 - sales_data.xlsx
