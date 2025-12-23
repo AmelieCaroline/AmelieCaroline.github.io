@@ -12,6 +12,7 @@ and communicating insights for business decisions.
 I am a Business Analytics student with a strong interest in data-driven problem solving.  
 I enjoy working with data to uncover patterns, answer business questions, and support decision-making.  
 I am a native French speaker and proficient in English.
+
 ---
 
 ## Technical Skills
