@@ -1,24 +1,621 @@
 <!DOCTYPE html>
-<html>
- <head>
-  <title>My personal introduction</title>
-  <style>
-   body{
-    background-color: #050505;
-    }
-   h1{
-    color: #fe820c;
-    }
-   p{
-    color: #f9faf9;
-    }
-  </style>
- </head>
- <body>
-  <h1>My name is Amelie Caroline Mbende.</h1>
-  <p>I am a business analytics student. 
-I find it very interesting how numbers are used to solve real-life problems. 
-I like challenges and I don't hesitate to go for something new. 
-After school and my part-time job, I enjoy spending time with my family.</p>
- </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Morgan | Data Analyst Portfolio</title>
+  <meta name="description" content="Portfolio of Alex Morgan — aspiring data analyst skilled in Python, SQL, and data visualization." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ─── NAV ─────────────────────────────────────────────────── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">AM<span class="dot">.</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about"    class="nav-link">About</a></li>
+        <li><a href="#skills"   class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact"  class="nav-link">Contact</a></li>
+        <li><a href="resume.html" class="nav-cta" target="_blank"><i class="fas fa-file-alt"></i> Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─────────────────────────────────────────────────── -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <canvas id="particleCanvas"></canvas>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow"><span class="badge">Available for opportunities</span></p>
+      <h1 class="hero-title">Hi, I'm <span class="highlight">Alex Morgan</span></h1>
+      <h2 class="hero-subtitle">Data Analyst &amp; Storyteller</h2>
+      <p class="hero-desc">
+        I transform raw data into clear, actionable insights using Python, SQL, and
+        compelling visualizations. Currently seeking entry-level Data Analyst roles
+        where I can contribute and grow.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary"><i class="fas fa-chart-bar"></i> View My Work</a>
+        <a href="#contact"  class="btn btn-outline"><i class="fas fa-envelope"></i> Get In Touch</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num" data-target="12">0</span><span class="stat-label">Projects</span></div>
+        <div class="stat"><span class="stat-num" data-target="5">0</span><span class="stat-label">Technologies</span></div>
+        <div class="stat"><span class="stat-num" data-target="3">0</span><span class="stat-label">Internships</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="chart-card floating">
+        <p class="chart-card-label"><i class="fas fa-chart-line"></i> Monthly Sales Analysis</p>
+        <canvas id="heroChart" height="180"></canvas>
+      </div>
+    </div>
+    <a href="#about" class="scroll-down" aria-label="Scroll down">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </section>
+
+<!-- ─── ABOUT ─────────────────────────────────────────────────── -->
+<section class="section about-section" id="about">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">About Me</span>
+      <h2 class="section-title">Turning data into clear, actionable insights</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-image-wrap">
+        <div class="about-image-placeholder">
+          <i class="fas fa-user"></i>
+          <p>Your Photo Here</p>
+        </div>
+        <div class="about-badge-card">
+          <i class="fas fa-graduation-cap"></i>
+          <div>
+            <strong>A.A.S. Business Analytics</strong>
+            <span>Wake Tech · Expected Dec 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-text">
+        <p class="about-lead">
+          I'm a Business Analytics student passionate about transforming raw data into
+          meaningful insights that support smarter business decisions.
+        </p>
+
+        <p>
+          My experience includes hands-on work with Excel, SQL, Power BI, and Tableau,
+          where I’ve built dashboards, cleaned datasets, automated reports, and analyzed
+          operational trends. I enjoy solving problems, improving workflows, and
+          presenting insights in a way that anyone can understand.
+        </p>
+
+        <p>
+          Outside of school and analytics, I enjoy creating professional Excel templates,
+          exploring data visualization techniques, and continuously improving my skills
+          through real-world projects.
+        </p>
+
+        <div class="about-highlights">
+          <div class="highlight-item"><i class="fas fa-check-circle"></i> Excel (PivotTables, Power Query)</div>
+          <div class="highlight-item"><i class="fas fa-check-circle"></i> SQL for data cleaning & joins</div>
+          <div class="highlight-item"><i class="fas fa-check-circle"></i> Power BI & Tableau dashboards</div>
+          <div class="highlight-item"><i class="fas fa-check-circle"></i> Strong communicator & detail‑oriented</div>
+        </div>
+
+        <div class="about-actions">
+          <a href="resume.html" class="btn btn-primary" target="_blank">
+            <i class="fas fa-file-alt"></i> View Full Resume
+          </a>
+          <a href="https://github.com/AmelieCaroline" class="btn btn-outline" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ─── SKILLS ─────────────────────────────────────────────────── -->
+<section class="section skills-section" id="skills">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Skill Set</span>
+      <h2 class="section-title">Tools & Technologies</h2>
+      <p class="section-sub">The tools I use to clean, analyze, visualize, and communicate data effectively.</p>
+    </div>
+
+    <div class="skills-categories">
+
+      <!-- Analytics Languages -->
+      <div class="skill-category">
+        <h3 class="skill-cat-title"><i class="fas fa-code"></i> Querying & Scripting</h3>
+        <div class="skill-pills">
+          <span class="pill pill-blue">SQL</span>
+          <span class="pill pill-blue">Python (pandas)</span>
+        </div>
+        <div class="skill-bars">
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>SQL</span><span>85%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="85" style="--bar-color:#4f46e5"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Python (pandas)</span><span>70%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="70" style="--bar-color:#4f46e5"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BI & Visualization -->
+      <div class="skill-category">
+        <h3 class="skill-cat-title"><i class="fas fa-chart-pie"></i> BI & Visualization</h3>
+        <div class="skill-pills">
+          <span class="pill pill-cyan">Power BI</span>
+          <span class="pill pill-cyan">Tableau</span>
+          <span class="pill pill-cyan">Excel</span>
+        </div>
+        <div class="skill-bars">
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Power BI</span><span>80%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="80" style="--bar-color:#0891b2"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Tableau</span><span>75%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="75" style="--bar-color:#0891b2"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Excel (PivotTables, Power Query)</span><span>92%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="92" style="--bar-color:#0891b2"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Tools -->
+      <div class="skill-category">
+        <h3 class="skill-cat-title"><i class="fas fa-database"></i> Data Tools & Platforms</h3>
+        <div class="skill-pills">
+          <span class="pill pill-green">MySQL</span>
+          <span class="pill pill-green">PostgreSQL</span>
+          <span class="pill pill-green">Git</span>
+          <span class="pill pill-green">Jupyter Notebook</span>
+        </div>
+        <div class="skill-bars">
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>MySQL / PostgreSQL</span><span>80%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="80" style="--bar-color:#16a34a"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Git / Version Control</span><span>70%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="70" style="--bar-color:#16a34a"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Jupyter Notebook</span><span>75%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="75" style="--bar-color:#16a34a"></div></div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end skills-categories -->
+  </div>
+</section>
+
+
+  <!-- ─── PROJECTS ─────────────────────────────────────────────────── -->
+<section class="section projects-section" id="projects">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Portfolio</span>
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-sub">Dashboards, analytics, and real business insights.</p>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="project-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="excel">Excel</button>
+      <button class="filter-btn" data-filter="powerbi">Power BI</button>
+      <button class="filter-btn" data-filter="sql">SQL</button>
+      <button class="filter-btn" data-filter="tableau">Tableau</button>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- Project 1: Excel Business Dashboard -->
+      <article class="project-card" data-tags="excel">
+        <div class="project-header" style="background: linear-gradient(135deg,#4f46e5,#7c3aed)">
+          <i class="fas fa-chart-line project-icon"></i>
+          <div class="project-tags">
+            <span class="tag">Excel</span>
+            <span class="tag">Dashboard</span>
+            <span class="tag">Power Query</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Small Business KPI Dashboard</h3>
+          <p class="project-desc">
+            Built a clean, automated Excel dashboard for small business owners to track
+            revenue, expenses, profit, and customer trends. Designed for clarity and
+            decision-making.
+          </p>
+          <ul class="project-highlights">
+            <li><i class="fas fa-sync"></i> Automated with Power Query</li>
+            <li><i class="fas fa-chart-pie"></i> 6+ interactive visuals</li>
+            <li><i class="fas fa-clock"></i> Cut reporting time by 50%</li>
+          </ul>
+        </div>
+        <div class="project-footer">
+          <a href="#" class="btn-link"><i class="fab fa-github"></i> GitHub</a>
+          <a href="#" class="btn-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+        </div>
+      </article>
+
+      <!-- Project 2: Job Application Tracker -->
+      <article class="project-card" data-tags="excel powerbi">
+        <div class="project-header" style="background: linear-gradient(135deg,#0891b2,#0e7490)">
+          <i class="fas fa-briefcase project-icon"></i>
+          <div class="project-tags">
+            <span class="tag">Excel</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">Automation</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Job Application Tracker Dashboard</h3>
+          <p class="project-desc">
+            Designed a professional tracker to monitor applications, interviews,
+            recruiter responses, and ATS keywords. Includes automated status updates
+            and visual insights.
+          </p>
+          <ul class="project-highlights">
+            <li><i class="fas fa-search"></i> ATS keyword analysis</li>
+            <li><i class="fas fa-chart-bar"></i> Interview & response trends</li>
+            <li><i class="fas fa-user-check"></i> Helps users optimize applications</li>
+          </ul>
+        </div>
+        <div class="project-footer">
+          <a href="#" class="btn-link"><i class="fab fa-github"></i> GitHub</a>
+          <a href="#" class="btn-link"><i class="fas fa-external-link-alt"></i> Dashboard</a>
+        </div>
+      </article>
+
+      <!-- Project 3: Retail Sales Analysis (SQL + Excel) -->
+      <article class="project-card" data-tags="sql excel">
+        <div class="project-header" style="background: linear-gradient(135deg,#16a34a,#15803d)">
+          <i class="fas fa-store project-icon"></i>
+          <div class="project-tags">
+            <span class="tag">SQL</span>
+            <span class="tag">Excel</span>
+            <span class="tag">Data Cleaning</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Retail Sales & Inventory Analysis</h3>
+          <p class="project-desc">
+            Cleaned and analyzed retail sales data using SQL to uncover seasonal
+            trends, top-performing products, and inventory gaps. Visualized insights
+            in Excel.
+          </p>
+          <ul class="project-highlights">
+            <li><i class="fas fa-boxes"></i> 12 product categories analyzed</li>
+            <li><i class="fas fa-database"></i> SQL joins, CTEs, window functions</li>
+            <li><i class="fas fa-lightbulb"></i> Actionable inventory insights</li>
+          </ul>
+        </div>
+        <div class="project-footer">
+          <a href="#" class="btn-link"><i class="fab fa-github"></i> GitHub</a>
+          <a href="#" class="btn-link"><i class="fas fa-file-alt"></i> Report</a>
+        </div>
+      </article>
+
+      <!-- Project 4: Power BI Customer Segmentation -->
+      <article class="project-card" data-tags="powerbi">
+        <div class="project-header" style="background: linear-gradient(135deg,#dc2626,#b91c1c)">
+          <i class="fas fa-users project-icon"></i>
+          <div class="project-tags">
+            <span class="tag">Power BI</span>
+            <span class="tag">DAX</span>
+            <span class="tag">Segmentation</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Customer Segmentation Dashboard</h3>
+          <p class="project-desc">
+            Built a Power BI dashboard to segment customers by behavior, spending,
+            and frequency. Helped identify high-value groups for targeted marketing.
+          </p>
+          <ul class="project-highlights">
+            <li><i class="fas fa-user-friends"></i> 4 customer segments identified</li>
+            <li><i class="fas fa-calculator"></i> Custom DAX measures</li>
+            <li><i class="fas fa-chart-area"></i> Fully interactive visuals</li>
+          </ul>
+        </div>
+        <div class="project-footer">
+          <a href="#" class="btn-link"><i class="fab fa-github"></i> GitHub</a>
+          <a href="#" class="btn-link"><i class="fas fa-external-link-alt"></i> Dashboard</a>
+        </div>
+      </article>
+
+      <!-- Project 5: Tableau Public Dashboard -->
+      <article class="project-card" data-tags="tableau">
+        <div class="project-header" style="background: linear-gradient(135deg,#d97706,#b45309)">
+          <i class="fas fa-chart-pie project-icon"></i>
+          <div class="project-tags">
+            <span class="tag">Tableau</span>
+            <span class="tag">Visualization</span>
+            <span class="tag">Storytelling</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">City Demographics & Income Dashboard</h3>
+          <p class="project-desc">
+            Created a Tableau dashboard exploring demographic and income trends across
+            U.S. cities. Focused on clear storytelling and accessible insights.
+          </p>
+          <ul class="project-highlights">
+            <li><i class="fas fa-city"></i> 50+ cities analyzed</li>
+            <li><i class="fas fa-eye"></i> Clean, intuitive visuals</li>
+            <li><i class="fas fa-map"></i> Geographic insights</li>
+          </ul>
+        </div>
+        <div class="project-footer">
+          <a href="#" class="btn-link"><i class="fab fa-github"></i> GitHub</a>
+          <a href="#" class="btn-link"><i class="fas fa-external-link-alt"></i> Tableau Public</a>
+        </div>
+      </article>
+
+      <!-- Project 6: Python Data Cleaning -->
+      <article class="project-card" data-tags="python">
+        <div class="project-header" style="background: linear-gradient(135deg,#7c3aed,#6d28d9)">
+          <i class="fas fa-broom project-icon"></i>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Data Cleaning</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Data Cleaning & Preparation Script</h3>
+          <p class="project-desc">
+            Wrote a Python script using pandas to clean messy datasets, handle missing
+            values, standardize formats, and prepare data for analysis.
+          </p>
+          <ul class="project-highlights">
+            <li><i class="fas fa-check-circle"></i> Automated cleaning steps</li>
+            <li><i class="fas fa-database"></i> Works on multiple datasets</li>
+            <li><i class="fas fa-code"></i> Reusable script</li>
+          </ul>
+        </div>
+        <div class="project-footer">
+          <a href="#" class="btn-link"><i class="fab fa-github"></i> GitHub</a>
+          <a href="#" class="btn-link"><i class="fas fa-book-open"></i> Notebook</a>
+        </div>
+      </article>
+
+    </div><!-- end projects-grid -->
+  </div>
+</section>
+
+  <!-- ─── EXPERIENCE ─────────────────────────────────────────────────── -->
+<section class="section experience-section" id="experience">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Background</span>
+      <h2 class="section-title">Experience & Education</h2>
+    </div>
+
+    <div class="exp-edu-grid">
+
+      <!-- Experience Timeline -->
+      <div class="timeline-col">
+        <h3 class="timeline-heading"><i class="fas fa-briefcase"></i> Work Experience</h3>
+        <div class="timeline">
+
+          <!-- Walmart -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2023 – Present</span>
+              <h4>Digital Shopper</h4>
+              <p class="timeline-company"><i class="fas fa-building"></i> Walmart · Raleigh, NC</p>
+              <ul class="timeline-bullets">
+                <li>Managed high-volume online orders with accuracy and speed</li>
+                <li>Improved workflow efficiency through organization and prioritization</li>
+                <li>Collaborated with team members to meet daily fulfillment targets</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Goodwill -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2021 – 2023</span>
+              <h4>Cashier & Customer Service Associate</h4>
+              <p class="timeline-company"><i class="fas fa-store"></i> Goodwill · Raleigh, NC</p>
+              <ul class="timeline-bullets">
+                <li>Handled transactions and maintained accurate daily cash reports</li>
+                <li>Provided excellent customer service in a fast-paced environment</li>
+                <li>Assisted with inventory organization and store operations</li>
+              </ul>
+            </div>
+          </div>
+
+        </div><!-- end timeline -->
+      </div>
+
+      <!-- Education Timeline -->
+      <div class="timeline-col">
+        <h3 class="timeline-heading"><i class="fas fa-graduation-cap"></i> Education & Certifications</h3>
+        <div class="timeline">
+
+          <!-- Wake Tech -->
+          <div class="timeline-item">
+            <div class="timeline-dot edu"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2024 – 2026</span>
+              <h4>A.A.S. Business Analytics</h4>
+              <p class="timeline-company"><i class="fas fa-university"></i> Wake Technical Community College · Raleigh, NC</p>
+              <ul class="timeline-bullets">
+                <li>Relevant coursework: SQL, Excel, Power BI, Tableau, Data Visualization</li>
+                <li>Capstone focus: Healthcare or Supply Chain Analytics</li>
+                <li>Expected Graduation: December 2026</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Google DA -->
+          <div class="timeline-item">
+            <div class="timeline-dot edu"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2023</span>
+              <h4>Google Data Analytics Certificate</h4>
+              <p class="timeline-company"><i class="fab fa-google"></i> Coursera (Google)</p>
+              <ul class="timeline-bullets">
+                <li>Completed full analytics lifecycle training</li>
+                <li>Hands-on projects using SQL, spreadsheets, and dashboards</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Excel Certification -->
+          <div class="timeline-item">
+            <div class="timeline-dot edu"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2022</span>
+              <h4>Microsoft Excel Certification</h4>
+              <p class="timeline-company"><i class="fas fa-certificate"></i> Microsoft</p>
+              <ul class="timeline-bullets">
+                <li>Certified in advanced Excel functions and data analysis tools</li>
+              </ul>
+            </div>
+          </div>
+
+        </div><!-- end timeline -->
+      </div>
+
+    </div><!-- end exp-edu-grid -->
+  </div>
+</section>
+
+<!-- ─── CONTACT ─────────────────────────────────────────────────── -->
+<section class="section contact-section" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Say Hello</span>
+      <h2 class="section-title">Let's Connect</h2>
+      <p class="section-sub">I'm actively looking for analytics internships and entry-level roles.</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <div class="contact-card">
+          <i class="fas fa-envelope contact-icon"></i>
+          <div>
+            <strong>Email</strong>
+            <a href="mailto:your.email@example.com">your.email@example.com</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <i class="fab fa-linkedin contact-icon"></i>
+          <div>
+            <strong>LinkedIn</strong>
+            <a href="https://linkedin.com/in/YOUR-LINK" target="_blank">linkedin.com/in/YOUR-LINK</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <i class="fab fa-github contact-icon"></i>
+          <div>
+            <strong>GitHub</strong>
+            <a href="https://github.com/AmelieCaroline" target="_blank">github.com/AmelieCaroline</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <i class="fas fa-map-marker-alt contact-icon"></i>
+          <div>
+            <strong>Location</strong>
+            <span>Raleigh, NC · Open to Remote</span>
+          </div>
+        </div>
+        <div class="contact-availability">
+          <span class="avail-dot"></span>
+          <span>Available for internships & entry-level roles</span>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject">
+            <option value="">Select a topic…</option>
+            <option>Job Opportunity</option>
+            <option>Freelance / Contract</option>
+            <option>Collaboration</option>
+            <option>General Inquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Hi Caroline, I came across your portfolio and…" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+
+    </div><!-- end contact-grid -->
+  </div>
+</section>
+
+
+  <!-- ─── FOOTER ─────────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <p class="footer-name">Caroline</p>
+    <p class="footer-tagline">Business Analytics · Excel · SQL · Power BI · Tableau</p>
+
+    <div class="footer-socials">
+      <a href="https://github.com/AmelieCaroline" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://linkedin.com/in/YOUR-LINK" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="mailto:your.email@example.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+
+    <p class="footer-copy">© 2026 Caroline. Built with passion, clarity, and clean data.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
 </html>
